@@ -1,0 +1,22 @@
+ALGORITHM summ
+VAR
+    l,w, : INTEGER:=1;
+    v: INTEGER:=0;
+    letter : CHAR;
+    
+BEGIN
+    read(letter);
+    WHILE (letter<>'.') DO
+        l=l+1;
+        IF (letter=' ') THEN
+            w=w+1;
+        ELSE_IF (ToUpper (letter) in ['A','O','U','I','E']) THEN
+            v=v+1;
+        
+        END_IF
+        read(letter);
+    END_WHILE
+    write('The length of the sentence = ',l)
+    write('The number of words  = ',w)
+    write('The number of vowels  = ',v)
+END
